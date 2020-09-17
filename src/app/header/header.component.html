@@ -1,0 +1,12 @@
+<div class="app-header-container">
+    <div class="form-group col-md-12">
+        <div class="col-md-4"></div>
+        <div class="col-md-3">
+            <select id="city" #cty="ngModel" name="cty" class="form-control" [(ngModel)]="city" (ngModelChange)="onSelectChange($event)">
+                <option *ngFor="let city of cities" [ngValue]="city">
+                    {{city.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>

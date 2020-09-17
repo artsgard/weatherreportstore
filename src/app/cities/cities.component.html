@@ -1,0 +1,19 @@
+<div class='app-city-container' [style.background-image]="'url('+backgroundImg+')'">
+    <h2>{{currentCityPhrase}}{{currentCityName}}</h2>
+    <div *ngIf="isCity" class = 'report-container'>
+        <div class = 'general-report'>
+            <p>The current weather of {{currentCityName}}:  {{this.description}}.</p>
+            <p>The temperature is {{temp}}.</p>
+            <p>Some details concerning the weather of {{currentCityName}}:</p>
+        </div>
+        <div class = 'detail-report'>
+            <p>Humidity in percentage: {{humidity}}%.</p>
+            <p>Wind speed in meters per second: {{wind}}.</p>
+            <p>Cloud clusters: {{clouds}}.</p>
+        </div>
+        <p>Enjoy your stay at {{currentCityName}}.</p>
+    </div>
+    <div *ngIf="!isCity" class = 'no-city'>
+        <p>and see what the weather is all about!</p>
+    </div>
+</div>
